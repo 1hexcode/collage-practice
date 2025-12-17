@@ -1,0 +1,25 @@
+@using MauiApp1.Model
+<div class="product-card">
+    <img class="product-image" src="@Product.ImageUrl" alt="Product Name">
+    <h3 class="product-title">@Product.Name</h3>
+    <p class="product-description">@Product.Location.</p>
+  
+    <div class="product-price">
+        $@Product.Price <span class="old-price">$@Product.Price</span>
+    </div>
+  
+    <div class="rating">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <button class="add-to-cart">Add to Cart</button>
+</div>
+@code
+{
+    [Parameter]
+    public Product Product { get; set; }
+}

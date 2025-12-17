@@ -1,0 +1,27 @@
+@page "/products"
+@using MauiApp1.Model
+
+
+@layout ProductLayout
+
+<h3>Hello from Products</h3>
+<div style="display: flex">
+    @foreach (Product product in products)
+    {
+        <ProductCard Product="@product"/>
+    }
+</div>
+
+@code
+{
+    List<Product> products = [
+        new Product() { Name = "Wireless Earbuds", Price = 29.99, Location = "USA", ImageUrl = "https://images.unsplash.com/photo-1610076909121-ccacb202f900", Likes = 10},
+        new Product() { Name = "Smartphone", Price = 699.99, Location = "China", ImageUrl = "https://example.com/smartphone.jpg", Likes = 13 },
+        new Product() { Name = "Gaming Laptop", Price = 1299.99, Location = "USA", ImageUrl = "https://example.com/gaming-laptop.jpg", Likes = 14 },
+        new Product() { Name = "Bluetooth Speaker", Price = 49.99, Location = "Germany", ImageUrl = "https://example.com/bluetooth-speaker.jpg", Likes = 20 },
+        new Product() { Name = "Smart Watch", Price = 199.99, Location = "South Korea", ImageUrl = "https://example.com/smart-watch.jpg", Likes = 11 },
+        new Product() { Name = "Electric Scooter", Price = 399.99, Location = "USA", ImageUrl = "https://example.com/electric-scooter.jpg" , Likes = 12}
+    ];
+
+}
+

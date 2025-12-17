@@ -1,0 +1,25 @@
+@page "/monkeys"
+@using MauiApp1.Model
+
+<h3>MonkeyDetails</h3>
+@if (monkeys.Count == 0)
+{
+    <p>No monkey found</p>
+}
+else
+{
+    @foreach(Monkey monkey in monkeys){
+        <p>Name: @monkey.Name</p>
+        <p>Location: @monkey.Location</p>
+        <img src= "@monkey.Image">
+    };
+}
+@code {
+
+    List<Monkey> monkeys =[
+        new Monkey() { Name = "Baboon", Location = "Africa & Asia", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg" },
+        new Monkey() { Name = "Capuchin Monkey", Location = "Central & South America", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/capuchin.jpg" },
+        new Monkey() { Name = "Blue Monkey", Location = "Central and East Africa", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg" },
+        new Monkey() { Name = "Squirrel Monkey", Location = "Central & South America", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/saimiri.jpg" },
+    ];
+}

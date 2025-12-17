@@ -1,0 +1,64 @@
+
+@page "/calculator";
+
+<p>Number 1: </p> <input type="number" @bind="number1"/>
+<p>Number 2: </p> <input type="number" @bind="number2"/>
+<hr/>
+<div>
+    <button @onclick="Add">Add</button>
+</div>
+<div>
+    <button @onclick="Subtract">Sub</button>
+</div>
+<div>
+    <button @onclick="Divide">Divide</button>
+</div>
+<div>
+    <button @onclick="Multiply">Multiply</button>
+</div>
+<div>
+    <button @onclick="Clear">Clear</button>
+</div>
+<p>Result: @result</p>
+
+@code
+{
+    private double number1;
+    private double number2;
+    private double result;
+
+    private void Add()
+    {
+        result = number1 + number2;
+    }
+
+    private void Subtract()
+    {
+        result = number1 - number2;
+    }
+
+    private void Multiply()
+    {
+        result = number1 * number2;
+    }
+
+    private void Divide()
+    {
+        if (number2 != 0)
+        {
+            result = number1 / number2;
+        }
+        else
+        {
+            result = double.NaN; // Division by zero returns NaN
+        }
+    }
+    
+    // Clear Method
+    private void Clear()
+    {
+        number1 = 0;
+        number2 = 0;
+        result = 0;
+    }
+}
