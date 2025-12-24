@@ -1,0 +1,9 @@
+@page "/product-form"
+@inject NavigationManager manager
+<h3>Product Form
+    </h3>
+
+<EditForm Model="@product" OnValidSubmit="AddProduct">
+    <DataAnnotationsValidator/>
+    <ValidationSUmmary />
+</EditForm>
