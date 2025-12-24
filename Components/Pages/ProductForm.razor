@@ -5,5 +5,53 @@
 
 <EditForm Model="@product" OnValidSubmit="AddProduct">
     <DataAnnotationsValidator/>
-    <ValidationSUmmary />
+    <ValidationSummary />
+    <div>
+        <label>Id</label>
+        <InputNumber @bind-Value="product.Id"></InputNumber>
+    </div>
+    <div>
+        <label>Name</label>
+        <InputText @bind-Value="product.Name"></InputText>
+    </div>
+    <div>
+        <label>Image</label>
+        <InputText @bind-Value="product.ImageUrl"></InputText>
+    </div>
+    <div>
+        <label>Price</label>
+        <InputNumber @bind-Value="product.Price"></InputNumber>
+    </div>
+    <div>
+        <label>Likes</label>
+        <InputNumber @bind-Value="product.Likes"></InputNumber>
+    </div>
+    <div>
+        <label>Location</label>
+        <InputText @bind-Value="product.Location"></InputText>
+    </div>
+    <div>
+        <label>Ratings</label>
+        <InputNumber @bind-Value="product.Rating"></InputNumber>
+    </div>
+    <div>
+        <label>Description</label>
+        <InputTextArea @bind-Value="product.Description"></InputTextArea>
+    </div>
+    <div>
+        <button type="submit">Add Product</button>
+    </div>
 </EditForm>
+
+@code {
+
+    private Product product = new();
+
+    private void AddProduct()
+    {
+        ProductStore.ProductList.Add(product);
+
+        manager.NavigateTo("/products");
+    }
+
+}

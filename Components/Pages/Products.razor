@@ -6,7 +6,7 @@
 
 <h3>Hello from Products</h3>
 <div style="display: flex">
-    @foreach (Product product in products)
+    @foreach (var product in ProductStore.ProductList)
     {
         <ProductCard Product="@product"/>
     }

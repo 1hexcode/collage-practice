@@ -350,3 +350,4 @@
 /Users/khatri/Documents/Rider/MauiApp1/MauiApp1/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/ref/MauiApp1.dll
 /Users/khatri/Documents/Rider/MauiApp1/MauiApp1/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/scopedcss/Components/Layout/ProductLayout.razor.rz.scp.css
 /Users/khatri/Documents/Rider/MauiApp1/MauiApp1/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/scopedcss/Components/Shared/ProductCard.razor.rz.scp.css
+/Users/khatri/Documents/Rider/MauiApp1/MauiApp1/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/MauiApp1.sourcelink.json

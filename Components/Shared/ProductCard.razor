@@ -9,11 +9,12 @@
     </div>
   
     <div class="rating">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+        @for (int i = 1; i <= 5; i++)
+        {
+            <span class="star @(i <= Product.Rating ? "filled" : "")">
+                ★
+            </span>
+        }
     </div>
 
     <button class="add-to-cart">Add to Cart</button>

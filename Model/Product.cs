@@ -1,4 +1,6 @@
 namespace MauiApp1.Model;
+using System.ComponentModel.DataAnnotations;
+
 
 public class Product
 {
@@ -10,7 +12,7 @@ public class Product
     [StringLength(50)]
     public string Name { get; set; }
     [Required]
-    [Range(0, double.MaxValue, ErrrorMessage="The price must be greater than or equal to 0.")]
+    [Range(0, double.MaxValue, ErrorMessage="The price must be greater than or equal to 0.")]
     public double Price { get; set; }
     public int Likes { get; set; }
     public string Location { get; set; }
