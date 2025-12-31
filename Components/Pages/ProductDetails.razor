@@ -1,0 +1,26 @@
+@page "/product/{ProductId:int}"
+
+<h3>Product description</h3>
+@if (product == null)
+{
+    <p>Product not found</p>
+}
+else{
+    <p>Product ID: @ProductId</p>
+    <p><b>Name:</b> @product.Name</p>
+    <p><b>Price:</b> $@product.Price</p>
+    <p><b>Description:</b> @product.Description</p>
+}
+@code
+{
+    [Parameter]
+    public required int ProductId { get; set; }
+    
+    private Product? product;
+
+    protected override void OnParametersSet()
+    {
+        product = ProductStore.ProductList
+            .FirstOrDefault(p => p.Id == ProductId);
+    }
+}

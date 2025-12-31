@@ -1,5 +1,6 @@
 @page "/product-form"
 @inject NavigationManager manager
+@inject IProductService ProductService
 <h3>Product Form
     </h3>
 
@@ -47,10 +48,13 @@
 
     private Product product = new();
 
+    @*ProductService productService = new();*@
+
     private void AddProduct()
     {
-        ProductStore.ProductList.Add(product);
-
+    
+        // ProductStore.ProductList.Add(product);
+        ProductService.AddProduct(product);
         manager.NavigateTo("/products");
     }
 

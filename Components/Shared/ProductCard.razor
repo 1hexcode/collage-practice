@@ -16,11 +16,18 @@
             </span>
         }
     </div>
-
+    @*<NavLink href="/product/@Product.Id">View</NavLink>*@
     <button class="add-to-cart">Add to Cart</button>
+    @*<button @onclick=""@(() => { ViewProductDetails(Product.Id);})></button>*@
 </div>
 @code
 {
     [Parameter]
     public Product Product { get; set; }
+
+   /*private void ViewProductDetails(int id)
+    {
+        Manager.NavigateTo($"/product/{id}");
+    }
+    */
 }

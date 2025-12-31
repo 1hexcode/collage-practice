@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiApp1.Services;
+using MauiApp1.Services.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace MauiApp1;
 
@@ -12,6 +14,7 @@ public static class MauiProgram
             .ConfigureFonts(fonts => { fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular"); });
 
         builder.Services.AddMauiBlazorWebView();
+        builder.Services.AddSingleton<IProductService, ProductService>();
 
 #if DEBUG
         builder.Services.AddBlazorWebViewDeveloperTools();
